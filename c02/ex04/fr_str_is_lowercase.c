@@ -6,13 +6,13 @@
 /*   By: yogarrid <yogarrid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 16:50:15 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/09 19:53:06 by yogarrid         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:06:40 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_lower(char *str)
+int	ft_str_islowercase(char *str)
 {
 	int	i;
 

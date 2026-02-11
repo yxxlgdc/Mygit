@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase                                      :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogarrid <yogarrid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 18:36:00 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/10 18:37:35 by yogarrid         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:06:28 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,19 @@ char	*ft_strlowcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!(str[i] < 'A' && str[i] > 'B'))
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			str[i] + 32;
-			i++;
+			str[i] += 32;
 		}
+		i++;
 	}
 	return (str);
 }
 
-/*int main()
+/*int	main(void)
 {
-	char *txt;
+	char	txt[8] = "ABCDEFG";
 
-	txt = "ABCDEFG";
 	ft_strlowcase(txt);
-	return(0);
+	return (0);
 }*/

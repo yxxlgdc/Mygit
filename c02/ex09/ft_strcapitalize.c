@@ -6,7 +6,7 @@
 /*   By: yogarrid <yogarrid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 18:48:21 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/10 19:24:19 by yogarrid         ###   ########.fr       */
+/*   Updated: 2026/02/11 14:06:34 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,15 @@ char	*ft_strcapitalize(char *str)
 		else
 		{
 			i++;
-			str[i] + 32
+			str[i] += 32
 		}
 		return (str);
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char *txt;
-
-	txt = "hola soy yowi";
+	char txt[13] = "hola soy yowi";
 	ft_strcapitalize(txt);
 	return (0);
-}
+}*/
