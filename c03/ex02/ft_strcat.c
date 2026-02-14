@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yogarrid <yogarrid@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yogarrid <yogarrid@Student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 18:34:04 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/11 21:43:49 by yogarrid         ###   ########.fr       */
+/*   Updated: 2026/02/14 12:36:38 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ char	*ft_strcat(char *dest, char *src)
 
 	i = 0;
 	x = 0;
-	while (dest != '\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while (src != '\0')
+	while (src[x] != '\0')
 	{
 		dest[i] = src[x];
-		j++;
+		x++;
+		i++; 
 	}
 	return (dest);
 }

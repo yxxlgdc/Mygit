@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogarrid <yogarrid@Student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/13 14:15:02 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/14 12:36:40 by yogarrid         ###   ########.fr       */
+/*   Created: 2026/02/14 11:51:03 by yogarrid          #+#    #+#             */
+/*   Updated: 2026/02/14 12:36:41 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strstr(char *str, char *to_find)
 {
 	unsigned int	i;
-	unsigned int	x;
+	unsigned int	b;
 
 	i = 0;
-	x = 0;
-	while (dest[i] != '\0')
+	b = 0;
+	if (to_find[b] != '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
+		if (to_find[b] == str[i] && str[i] && to_find[b])
+			return (&str[i]);
 		i++;
+		b++;
 	}
-	while (src[x] != '\0' && x < nb)
-	{
-		dest[i] = src[x];
-		i++;
-		x++;
-	}
-	dest[i] = '\0';
-	return (dest);
 }
-/*int main()
+
+int	main(void)
 {
-	char a[20] = "hola";
-	char b[] = "que tal estas";
-	ft_strncat(a, b, 11);
+	char	*txt;
+	char	*find;
+
+	txt = "quiero un millon de euros";
+	find = "millon";
+	ft_strstr(txt, find);
 	return (0);
-}*/
+}
