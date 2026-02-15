@@ -6,7 +6,7 @@
 /*   By: yogarrid <yogarrid@Student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 18:34:04 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/14 12:36:38 by yogarrid         ###   ########.fr       */
+/*   Updated: 2026/02/15 19:19:29 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,21 @@
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
-	int	x;
+	int	j;
 
 	i = 0;
-	x = 0;
+	j = 0;
 	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	while (src[x] != '\0')
+	while (src[j] != '\0')
 	{
-		dest[i] = src[x];
-		x++;
-		i++; 
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 
