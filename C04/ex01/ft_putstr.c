@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogarrid <yogarrid@Student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 08:28:34 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/18 08:31:15 by yogarrid         ###   ########.fr       */
+/*   Created: 2026/02/18 09:07:23 by yogarrid          #+#    #+#             */
+/*   Updated: 2026/02/18 09:07:32 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putstr(char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
+		write(1, &str[i], 1);
 		i++;
 	}
-	return (i);
 }
+/*int main()
+{
+	char *txt = "Hola que tal";
+	ft_putstr;
+	return (0);
+}*/

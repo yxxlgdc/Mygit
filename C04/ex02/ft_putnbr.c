@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yogarrid <yogarrid@Student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 08:28:34 by yogarrid          #+#    #+#             */
-/*   Updated: 2026/02/18 08:31:15 by yogarrid         ###   ########.fr       */
+/*   Created: 2026/02/18 07:27:34 by yogarrid          #+#    #+#             */
+/*   Updated: 2026/02/18 10:39:18 by yogarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+void	ft_putnbr(int nb)
 {
-	int		i;
+	char	c;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (nb == -2147483648)
 	{
-		i++;
+		write(1, "-2147483648", 11);
 	}
-	return (i);
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	c = (nb % 10) + '0';
+	write(1, &c, 1);
 }
+
+/*int	main(void)
+{
+	ft_putnbr(200);
+	return (0);
+}*/
