@@ -13,7 +13,7 @@ int main()
 {
 	char	*txt;
 
-	txt = "----+1234aa";
+	txt = "----+1234aar45767";
 	ft_atoi(txt);
 	return (0);
 }
